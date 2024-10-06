@@ -4,7 +4,7 @@ import threading
 
 # Función para iniciar el servidor de nombres
 def start_nameserver():
-    Pyro4.naming.startNS(host='0.0.0.0', port=9090)  # Cambia 'localhost' a '0.0.0.0' para permitir conexiones remotas
+    Pyro4.naming.startNS(host='0.0.0.0', port=9090)  # Escuchar en todas las direcciones
     print("Servidor de nombres iniciado en 0.0.0.0:9090")
 
 # Crear un hilo para el servidor de nombres

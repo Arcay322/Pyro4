@@ -3,7 +3,7 @@ import Pyro4
 
 app = Flask(__name__)
 
-# URL del servidor de nombres en Render
+# Cambia esto a tu URL de Render
 NAMESERVER_URL = "PYRONAME:example.factorial@pyro4-9vfb.onrender.com:9090"
 
 @app.route('/')
