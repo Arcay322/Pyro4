@@ -3,8 +3,8 @@ import Pyro4
 
 app = Flask(__name__)
 
-# Cambia esto a tu URL de Render
-NAMESERVER_URL = "PYRONAME:example.factorial@pyro4-9vfb.onrender.com:9090"
+# Solo el nombre del objeto
+NAMESERVER_URL = "PYRONAME:example.factorial"
 
 @app.route('/')
 def index():
@@ -13,7 +13,7 @@ def index():
 @app.route('/factorial', methods=['POST'])
 def calcular_factorial():
     numero = int(request.form['numero'])
-    factorial_server = Pyro4.Proxy(NAMESERVER_URL)  # Usamos la URL del servidor de nombres
+    factorial_server = Pyro4.Proxy(NAMESERVER_URL)  # Usamos el nombre del servidor de nombres
 
     try:
         resultado = factorial_server.factorial(numero)
