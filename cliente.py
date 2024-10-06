@@ -1,7 +1,7 @@
 import Pyro4
 
 def request_factorial(n):
-    factorial_server = Pyro4.Proxy("PYRONAME:example.factorial")
+    factorial_server = Pyro4.Proxy("PYRONAME:example.factorial@pyro4-9vfb.onrender.com:9090")  # Cambia la URL según sea necesario
     try:
         result = factorial_server.factorial(n)
         print(f"El factorial de {n} es: {result}")
